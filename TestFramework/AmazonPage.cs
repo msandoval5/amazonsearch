@@ -4,11 +4,28 @@ namespace TestFramework
 {
     internal class AmazonPage
     {
-        private IWebDriver driver;
-
-        public AmazonPage(IWebDriver driver)
+        private DriverConfig driver = new DriverConfig();
+        IWebElement search;
+        public void SearchProduct(string searchword)
         {
-            this.driver = driver;
+
+            search = driver.DriverChrome.FindElement(By.Id("twotabsearchtextbox"));
+            search.SendKeys(searchword);
+            
+        }
+
+        public void ClickSearch()
+        {
+        }
+
+        public void SelectProduct() 
+        {
+        
+        }
+
+        public void CleanUp()
+        {
+            driver.CleanUp();
         }
     }
 }

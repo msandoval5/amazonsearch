@@ -11,15 +11,16 @@ namespace TestFramework
         [Test()]
         public void AmazonSearching()
         {
-            IWebDriver driver = new ChromeDriver();
+            /*IWebDriver driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
-            driver.Url = "http://www.amazon.com/";
+            driver.Url = "http://www.amazon.com/"; */
 
-            AmazonPage amazon = new AmazonPage(driver);
-            amazon.SearchProduct();
+            AmazonPage amazon = new AmazonPage();
+            amazon.SearchProduct("iphone");
             amazon.ClickSearch();
             amazon.SelectProduct();
-            driver.Quit();
+           // amazon.CleanUp();
         }
+     
     }
 }
