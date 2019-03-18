@@ -16,7 +16,7 @@ namespace TestFramework
             driver.Url = "http://www.amazon.com/"; */
 
             AmazonPage amazon = new AmazonPage();
-            amazon.SearchProduct("iphone");
+            amazon.SearchProduct("Samsung Galaxy S9");
             amazon.ClickSearch();
             amazon.SelectProduct();
            // amazon.CleanUp();

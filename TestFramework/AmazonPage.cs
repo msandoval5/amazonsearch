@@ -6,6 +6,8 @@ namespace TestFramework
     {
         private DriverConfig driver = new DriverConfig();
         IWebElement search;
+        IWebElement searchBtn;
+        IWebElement product;
         public void SearchProduct(string searchword)
         {
 
@@ -16,11 +18,15 @@ namespace TestFramework
 
         public void ClickSearch()
         {
+            searchBtn = driver.DriverChrome.FindElement(By.XPath("//div[contains(@class, \"nav-search-submit\")]/child::input"));
+            searchBtn.Click();
         }
 
         public void SelectProduct() 
         {
-        
+            product = driver.DriverChrome.FindElement(By.XPath("//a[contains(@href ,\"/Samsung-Galaxy-S9-Unlocked-Smartphone\")]//span[contains(text(),\"64GB - Midnight Black - US Warranty\")]"));
+            product.Click();
+
         }
 
         public void CleanUp()
