@@ -19,6 +19,7 @@ namespace TestFramework
             amazon.SearchProduct("Samsung Galaxy S9");
             amazon.ClickSearch();
             amazon.SelectProduct();
+            amazon.ComparePrices();
            // amazon.CleanUp();
         }
      

@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 
 namespace TestFramework
 {
@@ -8,6 +9,7 @@ namespace TestFramework
         IWebElement search;
         IWebElement searchBtn;
         IWebElement product;
+        IWebElement price;
         public void SearchProduct(string searchword)
         {
 
@@ -26,6 +28,12 @@ namespace TestFramework
         {
             product = driver.DriverChrome.FindElement(By.XPath("//a[contains(@href ,\"/Samsung-Galaxy-S9-Unlocked-Smartphone\")]//span[contains(text(),\"64GB - Midnight Black - US Warranty\")]"));
             product.Click();
+
+        }
+        public void ComparePrices()
+        {
+            price = driver.DriverChrome.FindElement(By.Id("priceblock_ourprice"));
+            Assert.That((price).Text, Is.EqualTo("$553.47"));
 
         }
 
