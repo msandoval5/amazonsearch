@@ -5,7 +5,7 @@ namespace TestFramework
 {
     internal class AmazonPage
     {
-        private DriverConfig driver = new DriverConfig();
+        private DriverConfig driver = new DriverConfig("Chrome");
         IWebElement search;
         IWebElement searchBtn;
         IWebElement product;
@@ -37,9 +37,9 @@ namespace TestFramework
 
         }
 
-        public void CleanUp()
+       /* public void CleanUp()
         {
             driver.CleanUp();
-        }
+        } */
     }
 }

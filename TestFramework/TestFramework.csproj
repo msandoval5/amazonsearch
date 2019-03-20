@@ -43,6 +43,7 @@
     <Compile Include="AmazonSearch.cs" />
     <Compile Include="AmazonPage.cs" />
     <Compile Include="DriverConfig.cs" />
+    <Compile Include="DriverContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
